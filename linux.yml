@@ -34,6 +34,13 @@
     - role: sssd-ad
     - role: apache
 
+- name: mariadb
+  hosts: mariadb
+  roles:
+    - role: base
+    - role: ssh
+    - role: mariadb
+
 - name: ssh server linux
   hosts: ssh
   roles:
@@ -41,6 +48,13 @@
     - role: ssh
     - role: sssd-ad
 # open_to: authusers
+
+- name: nginx linux
+  hosts: nginx
+  roles:
+    - role: base
+    - role: ssh
+    - role: nginx
 
 - name: web linux
   hosts: web

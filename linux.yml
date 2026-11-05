@@ -34,6 +34,13 @@
     - role: sssd-ad
     - role: apache
 
+- name: mariadb
+  hosts: mariadb
+  roles:
+    - role: base
+    - role: ssh
+    - role: mariadb
+
 - name: ssh server linux
   hosts: ssh
   roles:

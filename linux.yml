@@ -49,6 +49,13 @@
     - role: sssd-ad
 # open_to: authusers
 
+- name: nginx linux
+  hosts: nginx
+  roles:
+    - role: base
+    - role: ssh
+    - role: nginx
+
 - name: web linux
   hosts: web
   roles:
